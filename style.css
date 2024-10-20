@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  max-width: 400px;
+  width: 100%; /* Responsive width */
+}
+
+.form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+input[type="text"], input[type="password"] {
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+input[type="text"]:hover, input[type="password"]:hover {
+  border-color: #0056b3;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.toggle {
+  background-color: #f8f9fa;
+  color: #007BFF;
+}
+
+.toggle:hover {
+  background-color: #e2e6ea;
+  color: #0056b3;
+}
+
+.clear {
+  background-color: #dc3545;
+}
+
+.clear:hover {
+  background-color: #c82333;
+}
+
+p {
+  font-size: 12px;
+  color: red;
+  margin-top: 5px;
+  height: 12px;
+  transition: color 0.4s ease;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  .form {
+      padding: 15px;
+  }
+
+  button {
+      padding: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  h3 {
+      font-size: 1.5rem;
+  }
+
+  input[type="text"], input[type="password"] {
+      font-size: 14px;
+  }
+
+  button {
+      font-size: 14px;
+  }
+
+  p {
+      font-size: 10px;
+  }
+}
+
+@keyframes input-focus {
+  0% {
+      border-color: #ccc;
+  }
+  100% {
+      border-color: #007BFF;
+  }
+}
